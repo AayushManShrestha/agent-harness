@@ -1,0 +1,6 @@
+def main() -> None:
+    print("Hello from agent-harness!")
+
+
+if __name__ == "__main__":
+    main()
