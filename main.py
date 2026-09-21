@@ -22,6 +22,8 @@ class CLI:
             return None
 
         assistant_streaming = False
+        final_response: str | None = None
+
         async for event in self.agent.run(message):
             if event.type == AgentEventType.TEXT_DELTA:
                 content = event.data.get("content", "")
